@@ -1,0 +1,12 @@
+﻿class Banda
+{
+    public string Nome { get; set; }
+
+    private List<Album> Albums = new List<Album>();
+
+    public void AddAlbum(Album album) =>
+        Albums.Add(album);
+
+    public void ExibirDiscografia() =>
+        Albums.ForEach(album => Console.WriteLine(album.Nome));
+}
