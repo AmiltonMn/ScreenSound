@@ -1,5 +1,10 @@
 ﻿class Banda
 {
+    public Banda(string nome) 
+    {
+        Nome = nome;
+    }
+
     public string Nome { get; set; }
 
     private List<Album> Albums = new List<Album>();
