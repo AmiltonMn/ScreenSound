@@ -1,4 +1,6 @@
-﻿class Album
+﻿namespace ScreenSound.Modelos;
+
+class Album
 {
     public Album(string nome) 
     {

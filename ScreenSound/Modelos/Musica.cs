@@ -1,9 +1,8 @@
-﻿using System;
-using System.Threading.Channels;
+﻿namespace ScreenSound.Modelos;
 
 class Musica
 {
-    public Musica(Banda artista, string nome, Genero genero) 
+    public Musica(Banda artista, string nome, string genero) 
     {
         Artista = artista;
         Nome = nome;
@@ -15,7 +14,7 @@ class Musica
     public float Duracao { get; set; }
     public bool Disponivel { get; set; }
     public float Nota { get; set; }
-    public Genero Genero { get; set; }
+    public string Genero { get; set; }
     public string DescricaoResumida =>
         $"A música {Nome} pertence à {Artista.Nome}";
   
@@ -23,7 +22,7 @@ class Musica
         Console.WriteLine($"Nome: {Nome}");
         Console.WriteLine($"Artista: {Artista.Nome}");
         Console.WriteLine($"Duração: {Duracao}s");
-        Console.WriteLine($"Gênero: {Genero.Nome}");
+        Console.WriteLine($"Gênero: {Genero}");
         if (Disponivel)
         {
             Console.WriteLine("Disponível no plano atual");
