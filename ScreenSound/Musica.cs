@@ -3,12 +3,14 @@ using System.Threading.Channels;
 
 class Musica
 {
-    public Musica(Banda artista) 
+    public Musica(Banda artista, string nome, Genero genero) 
     {
         Artista = artista;
+        Nome = nome;
+        Genero = genero;
     }
 
-    public string Nome { get; set; }
+    public string Nome { get; }
     public Banda Artista { get; }
     public float Duracao { get; set; }
     public bool Disponivel { get; set; }
