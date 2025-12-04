@@ -12,6 +12,11 @@ class Banda
     private List<int> Notas = new List<int>();
 
     private List<Album> Albums = new List<Album>();
+    public double Media => 
+        Notas.Average();
+
+    public void AddNota(int nota) =>
+        Notas.Add(nota);
 
     public void AddAlbum(Album album) =>
         Albums.Add(album);
