@@ -1,6 +1,6 @@
 ﻿namespace ScreenSound.Modelos;
 
-class Musica
+internal class Musica : IAvaliavel
 {
     public Musica(Banda artista, string nome, string genero) 
     {
@@ -9,6 +9,7 @@ class Musica
         Genero = genero;
     }
 
+    public List<Avaliacao> Avaliacoes = new();
     public string Nome { get; }
     public Banda Artista { get; }
     public float Duracao { get; set; }
@@ -17,6 +18,11 @@ class Musica
     public string Genero { get; set; }
     public string DescricaoResumida =>
         $"A música {Nome} pertence à {Artista.Nome}";
+    public double Media =>
+        Avaliacoes.Count > 0 ? Avaliacoes.Average(a => a.Nota) : 0;
+
+    public void AddNota(Avaliacao avaliacao) =>
+        Avaliacoes.Add(avaliacao);
   
     public void ExibirFichaTecnica() {
         Console.WriteLine($"Nome: {Nome}");

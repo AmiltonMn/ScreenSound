@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="ScreenSound/ScreenSound.csproj" />
+  <Project Path="../../../../../../source/repos/ScreenSound/ScreenSound-04/ScreenSound-04.csproj" Id="28ccaab9-8b1d-42d4-bd65-9e3a0cf64d4b" />
+  <Project Path="../../../../../../source/repos/ScreenSound/ScreenSound/ScreenSound.csproj" />
 </Solution>
